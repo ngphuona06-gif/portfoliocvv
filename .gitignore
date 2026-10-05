@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+app/node_modules/
+
+# Next.js build output
+.next/
+app/.next/
+out/
+app/out/
+build/
+app/build/
+
+# Temp & logs
+~$*
+*.log
+.env*.local
+.DS_Store
+Thumbs.db

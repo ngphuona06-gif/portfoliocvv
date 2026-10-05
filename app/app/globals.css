@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Epilogue', sans-serif;
+  background: #0f2027;
+  color: #ffffff;
+}
+
+/* ─── Footer layout ─── */
+.footer {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 2vw;
+  padding: 4vw 5vw 4vw;
+  overflow: hidden;
+}
+
+.jobs {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  grid-column: 2;
+  grid-row: 1;
+  width: clamp(80px, 10vw, 140px);
+  aspect-ratio: 1;
+  position: relative;
+  z-index: 1;
+  align-self: center;
+}
+
+.contact {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 1;
+  text-align: right;
+}
+
+/* ─── Tags & headlines ─── */
+.tag {
+  font-size: clamp(0.65rem, 0.85vw, 0.8rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.headline {
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.job-title {
+  font-size: clamp(1.4rem, 2.6vw, 2.4rem);
+}
+
+.contact-links {
+  font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+}
+
+.note {
+  margin: 0;
+  font-size: clamp(0.75rem, 0.9vw, 0.88rem);
+  opacity: 0.72;
+  line-height: 1.5;
+}
+
+/* ─── Footer nav ─── */
+.footer-nav {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 1rem;
+  font-size: clamp(0.75rem, 0.9vw, 0.88rem);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.footer-nav span:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ─── Socials ─── */
+.socials {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+  justify-content: flex-end;
+}
+
+.socials span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.socials span:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ─── Profile details section (full-width, row 2) ─── */
+.user-profile-details {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 2rem 1.4rem 3rem;
+    gap: 2rem;
+  }
+
+  .logo {
+    grid-column: 1;
+    grid-row: auto;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .contact {
+    grid-column: 1;
+    text-align: left;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+
+  .headline {
+    font-size: 1.5rem;
+  }
+
+  .job-title {
+    font-size: 1.8rem;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+}
