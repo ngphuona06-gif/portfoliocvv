@@ -4,24 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nguyễn Phương Nga — Portfolio &amp; CV</title>
-<meta name="description" content="Nguyễn Phương Nga - Foreign Trade University, International Business &amp; Economics. Portfolio, Academic, Experience, and Projects.">
+<meta name="description" content="Nguyễn Phương Nga - Foreign Trade University, International Business &amp; Economics. GPA: 3.57. Languages: English, Russian.">
 
 <!-- Fonts: Inter & Epilogue -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;900&family=Inter:opsz,wght@14..32,100..900&display=block" rel="stylesheet">
-
-<!-- Entrance animation trigger -->
-<script>
-(function(){
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  document.documentElement.classList.add('intro');
-  var t = setTimeout(function(){
-    document.documentElement.classList.remove('intro','intro-play');
-  }, 5000);
-  window.__introFailsafe = t;
-})();
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&family=Inter:opsz,wght@14..32,100..900&display=block" rel="stylesheet">
 
 <style>
 /* ─── Font face ─────────────────────────────────────────────────────── */
@@ -35,18 +23,16 @@
 
 /* ─── Scaling system ────────────────────────────────────────────────── */
 :root{
-  --u: max( min(calc(100vw / 1563), calc(100vh / 600)), 0.80px );
+  --u: max( min(calc(100vw / 1563), calc(100vh / 650)), 0.80px );
   --ink:#ffffff;
   --ink-mark:rgba(255,255,255,.98);
   --ink-nav:rgba(255,255,255,.91);
   --ink-sub:rgba(255,255,255,.75);
   --ink-pill:rgba(255,255,255,.88);
-  --glass-bg:rgba(255,255,255,.12);
-  --glass-line:rgba(255,255,255,.15);
-  --accent:#9b8cff;
+  --accent:#6366f1;
 }
 @supports (height:100dvh){
-  :root{ --u: max( min(calc(100vw / 1563), calc(100dvh / 600)), 0.80px ); }
+  :root{ --u: max( min(calc(100vw / 1563), calc(100dvh / 650)), 0.80px ); }
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────────── */
@@ -67,7 +53,7 @@ body{
   text-rendering:geometricPrecision;
 }
 
-/* ─── Fixed Background Artwork & Video ──────────────────────────────── */
+/* ─── Fixed Background Video ────────────────────────────────────────── */
 .bg-layer{
   position:fixed;
   inset:0;
@@ -91,7 +77,7 @@ body{
 .veil{
   position:absolute;
   inset:0;
-  background:linear-gradient(to bottom, rgba(5,7,11,.45) 0%, rgba(5,7,11,.65) 60%, rgba(5,7,11,.92) 100%);
+  background:linear-gradient(to bottom, rgba(5,7,11,.45) 0%, rgba(5,7,11,.70) 50%, rgba(5,7,11,.92) 100%);
   z-index:1;
 }
 
@@ -109,19 +95,19 @@ a:focus-visible, button:focus-visible{
   left:0;
   right:0;
   z-index:100;
-  background:rgba(5,7,11,0.68);
+  background:rgba(5,7,11,0.72);
   -webkit-backdrop-filter:blur(16px);
   backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
 .bar{
-  max-width:calc(1200 * var(--u));
+  max-width:1160px;
   margin:0 auto;
-  height:calc(48 * var(--u));
+  height:56px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 calc(24 * var(--u));
+  padding:0 24px;
   position:relative;
 }
 
@@ -129,13 +115,13 @@ a:focus-visible, button:focus-visible{
 .brand{
   display:flex;
   align-items:center;
-  gap:calc(12 * var(--u));
+  gap:12px;
   color:var(--ink-mark);
   text-decoration:none;
 }
 .brand svg{
-  width:calc(26.9 * var(--u));
-  height:calc(16.6 * var(--u));
+  width:27px;
+  height:17px;
   overflow:visible;
   display:block;
   flex-shrink:0;
@@ -146,14 +132,14 @@ a:focus-visible, button:focus-visible{
 }
 .brand-name{
   font-family:'Epilogue', sans-serif;
-  font-size:calc(15 * var(--u));
+  font-size:16px;
   font-weight:900;
   letter-spacing:-0.02em;
   color:#fff;
   line-height:1.1;
 }
 .brand-sub{
-  font-size:calc(9.5 * var(--u));
+  font-size:10px;
   letter-spacing:0.04em;
   color:var(--ink-sub);
   text-transform:uppercase;
@@ -162,13 +148,13 @@ a:focus-visible, button:focus-visible{
 /* Nav links */
 .links{
   display:flex;
-  gap:calc(26 * var(--u));
+  gap:28px;
   list-style:none;
   margin:0;
   padding:0;
 }
 .links a{
-  font-size:calc(12.5 * var(--u));
+  font-size:13px;
   font-weight:500;
   color:var(--ink-nav);
   text-decoration:none;
@@ -181,13 +167,13 @@ a:focus-visible, button:focus-visible{
 .actions{
   display:flex;
   align-items:center;
-  gap:calc(9 * var(--u));
+  gap:10px;
 }
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  border-radius:calc(10 * var(--u));
+  border-radius:10px;
   text-decoration:none;
   white-space:nowrap;
   line-height:1;
@@ -200,22 +186,22 @@ a:focus-visible, button:focus-visible{
   background:transparent;
   color:#fff;
   border:1px solid rgba(255,255,255,.8);
-  height:calc(34 * var(--u));
-  padding:0 calc(16 * var(--u));
-  font-size:calc(12 * var(--u));
+  height:36px;
+  padding:0 18px;
+  font-size:13px;
   font-weight:500;
 }
 .btn.ghost:hover{
-  background:rgba(255,255,255,.12);
+  background:rgba(255,255,255,.14);
   border-color:#fff;
 }
 .btn.solid{
   background:#fff;
   color:#000;
   border:1px solid #fff;
-  height:calc(34 * var(--u));
-  padding:0 calc(16 * var(--u));
-  font-size:calc(12 * var(--u));
+  height:36px;
+  padding:0 18px;
+  font-size:13px;
   font-weight:600;
 }
 .btn.solid:hover{
@@ -228,9 +214,9 @@ a:focus-visible, button:focus-visible{
   display:none;
   align-items:center;
   justify-content:center;
-  width:calc(36 * var(--u));
-  height:calc(36 * var(--u));
-  border-radius:calc(8 * var(--u));
+  width:36px;
+  height:36px;
+  border-radius:8px;
   border:1px solid rgba(255,255,255,.35);
   background:transparent;
   color:#fff;
@@ -274,151 +260,55 @@ a:focus-visible, button:focus-visible{
   margin-top:8px;
 }
 
-/* ─── Hero Section ──────────────────────────────────────────────────── */
-.hero-section{
+/* ─── Main Front-Page Container (Visible Directly on Load) ──────────── */
+.main-wrapper{
   position:relative;
   z-index:2;
-  min-height:92vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:calc(100 * var(--u)) calc(20 * var(--u)) calc(40 * var(--u));
+  max-width:1160px;
+  margin:0 auto;
+  padding:76px 20px 60px;
 }
 
-/* Pill */
+/* Top eyebrow pill */
+.pill-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:18px;
+}
 .pill{
   display:inline-flex;
   align-items:center;
-  padding:calc(4 * var(--u)) calc(12 * var(--u)) calc(4 * var(--u)) calc(4 * var(--u));
+  padding:5px 14px 5px 6px;
   border-radius:999px;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.2);
-  -webkit-backdrop-filter:blur(10px);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.24);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
   text-decoration:none;
-  margin-bottom:calc(24 * var(--u));
   transition:background-color .18s ease;
 }
-.pill:hover{ background:rgba(255,255,255,.18); }
+.pill:hover{ background:rgba(255,255,255,.22); }
 .chip{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:calc(3 * var(--u)) calc(9 * var(--u));
+  padding:3px 10px;
   border-radius:999px;
   background:#fff;
   color:#000;
-  font-size:calc(10.5 * var(--u));
+  font-size:11px;
   font-weight:700;
   text-transform:uppercase;
   letter-spacing:0.04em;
-  margin-right:calc(8 * var(--u));
+  margin-right:8px;
 }
 .pill-label{
-  color:rgba(255,255,255,.92);
-  font-size:calc(12.5 * var(--u));
-  font-weight:500;
-}
-.pill-arrow{
-  width:calc(9.5 * var(--u));
-  height:calc(8 * var(--u));
-  margin-left:calc(8 * var(--u));
-  color:rgba(255,255,255,.95);
-}
-
-/* Headline */
-h1{
-  font-family:'Epilogue', sans-serif;
-  font-size:clamp(2.4rem, 4.8vw, 4.2rem);
-  font-weight:900;
-  line-height:1.12;
-  letter-spacing:-0.03em;
-  color:#fff;
-  margin:0 0 calc(16 * var(--u));
-  max-width:calc(960 * var(--u));
-}
-.ln{
-  display:block;
-  overflow:hidden;
-}
-.ln-i{
-  display:block;
-}
-
-/* Sub-headline / Quote */
-.hero-quote{
-  font-size:clamp(1rem, 1.35vw, 1.35rem);
-  font-style:italic;
-  color:rgba(255,255,255,.82);
-  line-height:1.6;
-  max-width:calc(760 * var(--u));
-  margin:0 auto calc(28 * var(--u));
-}
-.hero-chips{
-  display:flex;
-  flex-wrap:wrap;
-  gap:calc(10 * var(--u));
-  justify-content:center;
-  margin-bottom:calc(32 * var(--u));
-}
-.hero-badge{
-  display:inline-flex;
-  align-items:center;
-  padding:calc(5 * var(--u)) calc(12 * var(--u));
-  border-radius:6px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.14);
-  font-size:calc(11.5 * var(--u));
-  color:#fff;
+  color:rgba(255,255,255,.94);
+  font-size:13px;
   font-weight:500;
 }
 
-/* CTA row */
-.cta{
-  display:flex;
-  gap:calc(12 * var(--u));
-  align-items:center;
-  justify-content:center;
-}
-.cta .btn{
-  height:calc(42 * var(--u));
-  padding:0 calc(24 * var(--u));
-  font-size:calc(13.5 * var(--u));
-  font-weight:600;
-  border-radius:calc(10 * var(--u));
-}
-
-/* Scroll indicator */
-.scroll-hint{
-  margin-top:calc(48 * var(--u));
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
-  color:rgba(255,255,255,.6);
-  font-size:calc(11 * var(--u));
-  text-decoration:none;
-  transition:color .2s;
-  animation:bounce 2s infinite ease-in-out;
-}
-.scroll-hint:hover{ color:#fff; }
-.scroll-hint svg{ width:18px; height:18px; stroke:currentColor; }
-@keyframes bounce{
-  0%,20%,50%,80%,100%{ transform:translateY(0); }
-  40%{ transform:translateY(8px); }
-  60%{ transform:translateY(4px); }
-}
-
-/* ─── Profile Details Section (Visible Directly on Page) ───────────── */
-.content-wrapper{
-  position:relative;
-  z-index:2;
-  max-width:1120px;
-  margin:0 auto;
-  padding:0 24px 80px;
-}
+/* Profile Card */
 .profile-card{
   background:rgba(255,255,255,0.96);
   border-radius:24px;
@@ -433,7 +323,7 @@ h1{
 .profile-header{
   display:flex;
   flex-wrap:wrap;
-  gap:32px;
+  gap:36px;
   align-items:center;
 }
 .profile-avatar-wrap{
@@ -461,20 +351,21 @@ h1{
   letter-spacing:0.1em;
   color:#4f46e5;
   background:#eef2ff;
-  padding:4px 10px;
+  padding:4px 12px;
   border-radius:999px;
   margin-bottom:8px;
 }
 .profile-name{
   font-family:'Epilogue', sans-serif;
-  font-size:2.2rem;
+  font-size:2.4rem;
   font-weight:900;
   color:#0f172a;
   margin:0 0 6px;
   letter-spacing:-0.02em;
+  line-height:1.15;
 }
 .profile-subtitle{
-  font-size:1.15rem;
+  font-size:1.2rem;
   font-weight:600;
   color:#475569;
   margin:0 0 14px;
@@ -484,14 +375,14 @@ h1{
   color:#334155;
   line-height:1.6;
   margin:0 0 18px;
-  font-size:0.98rem;
+  font-size:1rem;
   border-left:3px solid #6366f1;
   padding-left:14px;
 }
 .contact-chips{
   display:flex;
   flex-wrap:wrap;
-  gap:16px;
+  gap:14px;
   font-size:0.95rem;
 }
 .contact-chip{
@@ -499,7 +390,7 @@ h1{
   align-items:center;
   gap:6px;
   background:#f1f5f9;
-  padding:6px 14px;
+  padding:8px 16px;
   border-radius:8px;
   color:#1e293b;
   text-decoration:none;
@@ -551,7 +442,7 @@ h1{
 }
 .school-name{
   font-weight:800;
-  font-size:1.1rem;
+  font-size:1.15rem;
   color:#0f172a;
   margin:0 0 4px;
 }
@@ -559,6 +450,7 @@ h1{
   color:#475569;
   font-weight:600;
   margin:0 0 14px;
+  font-size:1rem;
 }
 .meta-row{
   display:flex;
@@ -650,52 +542,25 @@ h1{
 /* Footer note */
 .site-footer{
   text-align:center;
-  padding:24px;
-  font-size:0.85rem;
-  color:rgba(255,255,255,.5);
+  padding:24px 20px 40px;
+  font-size:0.88rem;
+  color:rgba(255,255,255,.55);
   position:relative;
   z-index:2;
 }
 
 /* ─── Responsive ────────────────────────────────────────────────────── */
 @media (max-width:1023px){
-  :root{ --u: calc(100vw / 900); }
   .links{ display:none; }
   .bar .btn.solid{ display:none; }
   .menu{ display:inline-flex; }
   .profile-card{ padding:32px 24px; }
 }
 @media (max-width:640px){
-  :root{ --u: calc(100vw / 486); }
   .profile-header{ flex-direction:column; text-align:center; }
-  .profile-quote{ border-left:0; border-top:2px solid #6366f1; padding:10px 0 0; }
+  .profile-quote{ border-left:0; border-top:2px solid #6366f1; padding:12px 0 0; }
   .contact-chips{ justify-content:center; }
   .socials-row{ justify-content:center; }
-  .cta{ flex-direction:column; width:100%; }
-  .cta .btn{ width:100%; }
-}
-
-/* ─── Entrance Animations ───────────────────────────────────────────── */
-@media (prefers-reduced-motion: no-preference){
-  .intro .pill,
-  .intro h1,
-  .intro .hero-quote,
-  .intro .hero-chips,
-  .intro .cta,
-  .intro .profile-card{
-    opacity:0;
-    transform:translateY(24px);
-    transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
-  }
-  .intro-play .pill{ opacity:1; transform:none; transition-delay:.15s; }
-  .intro-play h1{ opacity:1; transform:none; transition-delay:.25s; }
-  .intro-play .hero-quote{ opacity:1; transform:none; transition-delay:.35s; }
-  .intro-play .hero-chips{ opacity:1; transform:none; transition-delay:.45s; }
-  .intro-play .cta{ opacity:1; transform:none; transition-delay:.55s; }
-  .intro-play .profile-card{ opacity:1; transform:none; transition-delay:.70s; }
-}
-@media (prefers-reduced-motion: reduce){
-  *{ animation:none!important; transition:none!important; }
 }
 </style>
 </head>
@@ -712,7 +577,7 @@ h1{
   <div class="veil"></div>
 </div>
 
-<!-- Header -->
+<!-- Header Navigation -->
 <header class="header-wrap">
   <div class="bar">
     <!-- Brand -->
@@ -742,7 +607,7 @@ h1{
     <!-- Actions -->
     <div class="actions">
       <a class="btn ghost" href="#contact">Contact</a>
-      <a class="btn solid" href="#about">View Profile</a>
+      <a class="btn solid" href="mailto:ngphuona06@gmail.com">Get in Touch</a>
       <button class="menu" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu-sheet">
         <svg viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
           <path d="M0 1h20M0 7h20M0 13h20"/>
@@ -754,60 +619,25 @@ h1{
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a class="btn solid" href="#contact">Get in Touch</a>
+        <a class="btn solid" href="mailto:ngphuona06@gmail.com">Get in Touch</a>
       </nav>
     </div>
   </div>
 </header>
 
-<!-- Main Front-Page Hero -->
-<main class="hero-section" id="hero">
+<!-- Main Front-Page Container (Immediately Visible) -->
+<main class="main-wrapper" id="hero">
+
   <!-- Eyebrow Pill -->
-  <a class="pill" href="#about">
-    <span class="chip">Portfolio</span>
-    <span class="pill-label">Foreign Trade University • GPA 3.57</span>
-    <svg class="pill-arrow" viewBox="0 0 9.5 8" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M0.7 4H8.8M5.6 0.75 8.85 4 5.6 7.25"/>
-    </svg>
-  </a>
-
-  <!-- Headline -->
-  <h1>
-    <span class="ln"><span class="ln-i">Nguyễn Phương Nga</span></span>
-    <span class="ln"><span class="ln-i" style="color:rgba(255,255,255,0.85);font-size:0.75em;font-weight:700;">International Business &amp; Economics</span></span>
-  </h1>
-
-  <!-- Motto Quote -->
-  <p class="hero-quote">
-    &ldquo;Be willing to start again, embrace new challenges, and turn every experience into an opportunity to grow, create value, and make a meaningful impact.&rdquo;
-  </p>
-
-  <!-- Chips -->
-  <div class="hero-chips">
-    <span class="hero-badge">🎓 Foreign Trade University</span>
-    <span class="hero-badge">⭐ GPA: 3.57</span>
-    <span class="hero-badge">🌐 English &amp; Russian</span>
-    <span class="hero-badge">📍 Vietnam</span>
+  <div class="pill-wrap">
+    <a class="pill" href="#about">
+      <span class="chip">Portfolio</span>
+      <span class="pill-label">Foreign Trade University • GPA 3.57</span>
+    </a>
   </div>
 
-  <!-- CTA Buttons -->
-  <div class="cta">
-    <a class="btn solid" href="#about">Khám phá hồ sơ</a>
-    <a class="btn ghost" href="#contact">Liên hệ ngay</a>
-  </div>
-
-  <!-- Scroll Down Hint -->
-  <a class="scroll-hint" href="#about" aria-label="Cuộn xuống để xem chi tiết">
-    <span>Xem thông tin chi tiết</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-    </svg>
-  </a>
-</main>
-
-<!-- Detailed Profile Section Directly on Front Page -->
-<div class="content-wrapper" id="about">
-  <section class="profile-card" aria-label="Thông tin chi tiết Nguyễn Phương Nga">
+  <!-- Profile Card (About Me, Academic, Experience, Projects) -->
+  <div class="profile-card" id="about">
     
     <!-- Profile Header / Bio -->
     <div class="profile-header">
@@ -819,7 +649,7 @@ h1{
       </div>
       <div class="profile-intro">
         <span class="tag-badge">About me</span>
-        <h2 class="profile-name">Nguyễn Phương Nga</h2>
+        <h1 class="profile-name">Nguyễn Phương Nga</h1>
         <div class="profile-subtitle">Foreign Trade University &bull; International Business &amp; Economics</div>
         <p class="profile-quote">
           &ldquo;Be willing to start again, embrace new challenges, and turn every experience into an opportunity to grow, create value, and make a meaningful impact.&rdquo;
@@ -842,7 +672,7 @@ h1{
       
       <!-- Academic & Socials -->
       <div id="academic">
-        <h3 class="section-title">Academic</h3>
+        <h2 class="section-title">Academic</h2>
         <div class="academic-box">
           <div class="school-name">Foreign Trade University</div>
           <div class="major-name">International Business &amp; Economics</div>
@@ -867,7 +697,7 @@ h1{
 
       <!-- Experience -->
       <div id="experience">
-        <h3 class="section-title">Experience</h3>
+        <h2 class="section-title">Experience</h2>
         <ul class="exp-list">
           <li class="exp-item">
             <strong>Restaurant Server</strong>
@@ -894,7 +724,7 @@ h1{
 
       <!-- Projects & Contact -->
       <div id="projects">
-        <h3 class="section-title">Projects</h3>
+        <h2 class="section-title">Projects</h2>
         <ul class="proj-list">
           <li class="proj-item">
             <strong>GE — Green Exchange</strong>
@@ -907,7 +737,7 @@ h1{
         </ul>
 
         <div id="contact" style="margin-top:28px;">
-          <h3 class="section-title">Contact</h3>
+          <h2 class="section-title">Contact</h2>
           <div class="academic-box">
             <p style="margin:0 0 8px;font-size:0.95rem;">
               <strong>Email:</strong> <a href="mailto:ngphuona06@gmail.com" style="color:#4f46e5;text-decoration:none;font-weight:600;">ngphuona06@gmail.com</a>
@@ -920,12 +750,13 @@ h1{
       </div>
 
     </div><!-- /.profile-grid -->
-  </section>
-</div>
+  </div><!-- /.profile-card -->
+
+</main>
 
 <!-- Footer -->
 <footer class="site-footer">
-  &copy; 2026 Nguyễn Phương Nga &bull; Foreign Trade University &bull; Built with Orbit Design System
+  &copy; 2026 Nguyễn Phương Nga &bull; Foreign Trade University &bull; Portfolio &amp; CV
 </footer>
 
 <!-- ─── Video Auto-Play Script ──────────────────────────────────────── -->
@@ -981,40 +812,6 @@ h1{
     sheet.querySelectorAll('a').forEach(function(a){
       a.addEventListener('click', function(){ set(false); });
     });
-  }
-})();
-</script>
-
-<!-- ─── Entrance Animation Script ───────────────────────────────────── -->
-<script>
-(function(){
-  var html = document.documentElement;
-  if(!html.classList.contains('intro')) return;
-  var started = false;
-  function start(){
-    if(started) return;
-    started = true;
-    requestAnimationFrame(function(){
-      requestAnimationFrame(function(){
-        html.classList.add('intro-play');
-        setTimeout(function(){
-          if(window.__introFailsafe) clearTimeout(window.__introFailsafe);
-          html.classList.remove('intro','intro-play');
-        }, 2000);
-      });
-    });
-  }
-  var fontTimer = setTimeout(start, 600);
-  if(document.fonts && document.fonts.ready){
-    document.fonts.ready.then(function(){
-      clearTimeout(fontTimer);
-      start();
-    }).catch(function(){
-      clearTimeout(fontTimer);
-      start();
-    });
-  } else {
-    start();
   }
 })();
 </script>
